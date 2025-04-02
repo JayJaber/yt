@@ -4,6 +4,10 @@ import { YoutubeTranscript } from 'youtube-transcript';
 const app = express();
 const port = 3000;
 
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
 // Route to get the transcript of a YouTube video based on its ID
 app.get('/transcript/:id', async (req, res) => {
   try {
