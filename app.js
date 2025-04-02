@@ -20,6 +20,7 @@ app.get('/transcript/:id', async (req, res) => {
 
     res.json({ transcript: text });
   } catch (error) {
+    console.log(JSON.stringify(error));
     res.status(500).json({ error: 'Failed to fetch transcript' });
   }
 });
